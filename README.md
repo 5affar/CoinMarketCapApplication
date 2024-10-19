@@ -1,6 +1,14 @@
 # CoinMarketCapApplication
 Recreation of the popular CoinMarketCap Application using Flutter for the frontend and C#.NET for the backend. 
 
+## Feature Demonstration
+
+## Application Overview
+
+Here’s a quick demonstration of what the app currently offers:
+
+![App Overview](assets/gifs/showcase1.gif)
+
 ## Requirements for Setup
 
 To successfully run this project, you'll need the following tools and software installed on your machine:
