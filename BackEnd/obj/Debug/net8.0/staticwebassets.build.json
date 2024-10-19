@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "nHmZ7MfantzJIHS9KWDoYnNwEK1KH4fxd+0b7BQ0qTs=",
+  "Source": "CryptoDatabaseApp",
+  "BasePath": "_content/CryptoDatabaseApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
