@@ -23,7 +23,7 @@ To successfully run this project, you'll need the following tools and software i
 
 #### Database Setup:
 - Create a new database for the project in SQL Server.
-- Create a CryptoCurrencies table that matches the structure used in the C# backend.
+- Create a ```CryptoCurrencies``` table that matches the structure used in the C# backend.
 
 ### 2. .NET Core SDK
 - Install the **.NET Core SDK** (version 6.0 or later).
