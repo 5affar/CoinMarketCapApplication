@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -645,9 +647,32 @@ class CoinsPageMainWidgetCards extends StatelessWidget {
     required this.graph,
   });
 
+  double truncateToDecimalPlaces(num value, int fractionalDigits) =>
+      (value * pow(10, fractionalDigits)).truncate() /
+      pow(10, fractionalDigits);
+
+  String formatPrice(num price) {
+    int decimalPlaces;
+
+    if (price >= 1) {
+      decimalPlaces = 2;
+    } else if (price >= 0.01) {
+      decimalPlaces = 4;
+    } else {
+      decimalPlaces = 8;
+    }
+
+    final truncatedPrice = truncateToDecimalPlaces(price, decimalPlaces);
+
+    final formattedPrice = NumberFormat("#,##0.${'0' * decimalPlaces}", "en_US")
+        .format(truncatedPrice);
+
+    return formattedPrice;
+  }
+
   @override
   Widget build(BuildContext context) {
-    final formattedPrice = NumberFormat("#,##0.00").format(price);
+    final formattedPrice = formatPrice(price);
     final formattedGraph = NumberFormat("#,##0.00").format(graph.abs());
     final formattedMarketCap = HelperFunctions.formatLargeNumber(marketcap);
 
@@ -715,7 +740,7 @@ class CoinsPageMainWidgetCards extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 3),
               child: SizedBox(
-                width: 70,
+                width: 75,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [

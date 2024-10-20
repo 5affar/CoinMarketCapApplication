@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CryptoDatabaseApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fda6e38952379db4345ec8c35fb165857461494")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af9b0bd0061dfa07c604c10f2bff816a20300f1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CryptoDatabaseApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CryptoDatabaseApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
