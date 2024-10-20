@@ -620,7 +620,7 @@ class _CoinsCardWidgetState extends State<CoinsCardWidget> {
             Icon(
               _isAscending ? Icons.arrow_drop_down : Icons.arrow_drop_up,
               size: 14,
-              color: Colors.black,
+              color: const Color.fromARGB(255, 15, 11, 255),
             ),
           ],
         ],
