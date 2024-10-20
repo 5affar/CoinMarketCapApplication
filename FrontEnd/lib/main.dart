@@ -517,7 +517,6 @@ class _PageNavVertiWidgetState extends State<PageNavVertiWidget> {
               }).toList(),
             ),
           ),
-          // Dynamic content area below the navigation bar
           SizedBox(height: 594, child: _getSelectedPageContent())
         ],
       ),
@@ -550,13 +549,12 @@ class _CoinsCardWidgetState extends State<CoinsCardWidget> {
         _isAscending = true;
       }
 
-      String order = _isAscending ? 'asc' : 'desc';
+      String order = _isAscending ? 'desc' : 'asc';
       context.read<MyAppState>().changeSort(field, order);
     });
   }
 
-  String _currentSortField =
-      ''; // Tracks the field by which data is being sorted
+  String _currentSortField = '';
   bool _isAscending = true;
 
   @override
@@ -575,7 +573,8 @@ class _CoinsCardWidgetState extends State<CoinsCardWidget> {
             padding: const EdgeInsets.only(left: 19.0),
             child: Row(
               children: [
-                SizedBox(width: 27, child: _buildSortableColumnHeader('#', '')),
+                SizedBox(
+                    width: 27, child: _buildSortableColumnHeader('#', 'rank')),
                 SizedBox(
                     width: 229,
                     child:
@@ -586,7 +585,8 @@ class _CoinsCardWidgetState extends State<CoinsCardWidget> {
                         child: _buildSortableColumnHeader('Price', 'price'))),
                 SizedBox(
                     width: 50,
-                    child: _buildSortableColumnHeader('24h %', '24h')),
+                    child: _buildSortableColumnHeader(
+                        '24h %', 'percentchange24h')),
               ],
             ),
           ),

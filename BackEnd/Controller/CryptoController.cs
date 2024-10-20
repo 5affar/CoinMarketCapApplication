@@ -39,6 +39,10 @@ public class CryptoController : ControllerBase
                 ? query.OrderByDescending(c => c.PercentChange24h)
                 : query.OrderBy(c => c.PercentChange24h),
 
+            "marketcap" => sortOrder.ToLower() == "desc"
+                ? query.OrderByDescending(c => c.MarketCap)
+                : query.OrderBy(c => c.MarketCap),
+
             _ => sortOrder.ToLower() == "desc"
                 ? query.OrderByDescending(c => c.CmcRank)
                 : query.OrderBy(c => c.CmcRank),
